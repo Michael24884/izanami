@@ -1,0 +1,8 @@
+{
+  "name": "izanami",
+  "version": "0.0.1",
+  "scripts": {
+    "bundle-ios": "react-native bundle --minify --entry-file index.js --platform ios --dev false --bundle-output ./ios/main.jsbundle --assets-dest ./ios",
+    "build-release-android": "source ~/.bashrc && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && cd android && ./gradlew clean && ./gradlew assembleRelease && cd .."
+  }
+}
